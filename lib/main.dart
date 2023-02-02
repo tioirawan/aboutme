@@ -99,25 +99,21 @@ class _MyAppState extends ConsumerState<App> {
               ),
             ),
             Positioned.fill(
-              child: WebSmoothScroll(
-                animationDuration: 400,
-                controller: _scrollController,
-                child: ListView.builder(
+              // child: WebSmoothScroll(
+              //   animationDuration: 400,
+              //   controller: _scrollController,
+              //   child: ListView.builder(
+              //     controller: _scrollController,
+              //     physics: const NeverScrollableScrollPhysics(),
+              //     itemCount: sections.length,
+              //     itemBuilder: (context, index) => sections[index],
+              //   ),
+              // ),
+              child: ListView.builder(
                   controller: _scrollController,
-                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: sections.length,
                   itemBuilder: (context, index) => sections[index],
-                ),
-                // child: SingleChildScrollView(
-                //   controller: _scrollController,
-                //   physics: const NeverScrollableScrollPhysics(),
-                //   // itemCount: sections.length,
-                //   // itemBuilder: (context, index) => sections[index],
-                //   child: Column(
-                //     children: sections,
-                //   ),
-                // ),
-              ),
+                )
             ),
           ],
         ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mouse_parallax/mouse_parallax.dart';
 import 'package:tioirawan/sections/more_works_section.dart';
 import 'dart:math' as math;
@@ -123,47 +122,48 @@ class _ContactSectionState extends ConsumerState<ContactSection> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               RepaintBoundary(
-                                child: const FaIcon(
-                                  FontAwesomeIcons.linkedin,
-                                )
-                                    .animate(
-                                      target: _shouldShowContacts ? 1 : 0,
-                                    )
-                                    .fadeIn(delay: 1.seconds)
-                                    .tint(color: const Color(0xFF0077B5)),
-                              ),
+                                  child: Image.asset(
+                                "assets/images/social/linkedin.png",
+                                width: 24,
+                                height: 24,
+                              )
+                                      .animate(
+                                        target: _shouldShowContacts ? 1 : 0,
+                                      )
+                                      .fadeIn(delay: 1.seconds)),
                               const SizedBox(width: 14),
                               RepaintBoundary(
-                                child: const FaIcon(
-                                  FontAwesomeIcons.github,
-                                )
-                                    .animate(
-                                      target: _shouldShowContacts ? 1 : 0,
-                                    )
-                                    .fadeIn(delay: 1.5.seconds)
-                                    .tint(color: const Color(0xFF333333)),
-                              ),
+                                  child: Image.asset(
+                                "assets/images/social/github.png",
+                                width: 24,
+                                height: 24,
+                              )
+                                      .animate(
+                                        target: _shouldShowContacts ? 1 : 0,
+                                      )
+                                      .fadeIn(delay: 1.5.seconds)),
                               const SizedBox(width: 14),
                               RepaintBoundary(
-                                child: const FaIcon(
-                                  FontAwesomeIcons.twitter,
-                                )
-                                    .animate(
-                                      target: _shouldShowContacts ? 1 : 0,
-                                    )
-                                    .fadeIn(delay: 2.seconds)
-                                    .tint(color: const Color(0xFF1DA1F2)),
-                              ),
+                                  child: Image.asset(
+                                "assets/images/social/twitter.png",
+                                width: 24,
+                                height: 24,
+                              )
+                                      .animate(
+                                        target: _shouldShowContacts ? 1 : 0,
+                                      )
+                                      .fadeIn(delay: 2.seconds)),
                               const SizedBox(width: 14),
                               RepaintBoundary(
-                                child: const FaIcon(
-                                  FontAwesomeIcons.instagram,
+                                child: Image.asset(
+                                  "assets/images/social/instagram.png",
+                                  width: 24,
+                                  height: 24,
                                 )
                                     .animate(
                                       target: _shouldShowContacts ? 1 : 0,
                                     )
-                                    .fadeIn(delay: 2.5.seconds)
-                                    .tint(color: const Color(0xFFE1306C)),
+                                    .fadeIn(delay: 2.5.seconds),
                               ),
                             ],
                           )

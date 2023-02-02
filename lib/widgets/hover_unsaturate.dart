@@ -15,13 +15,14 @@ class HoverUnsaturateState extends State<HoverUnsaturate> {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint("building");
     return MouseRegion(
-      onEnter: (_) => setState(() => _isHovering = true),
-      onExit: (_) => setState(() => _isHovering = false),
-      child: widget.child
-          .animate(target: _isHovering ? 1 : 0)
-          .scale(begin: const Offset(1, 1), end: const Offset(1.2, 1.2))
-          .saturate(),
-    );
+        onEnter: (_) => setState(() => _isHovering = true),
+        onExit: (_) => setState(() => _isHovering = false),
+        child: widget.child
+            .animate(target: _isHovering ? 1 : 0)
+            .scale(begin: const Offset(1, 1), end: const Offset(1.2, 1.2))
+        // .saturate(),
+        );
   }
 }

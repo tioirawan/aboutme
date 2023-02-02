@@ -127,11 +127,12 @@ class _LandingSectionState extends ConsumerState<LandingSection> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SelectableText(
+                      Text(
                         "Tio Irawan",
                         style: textTheme.displayLarge,
                       ),
-                      SelectableText.rich(TextSpan(
+                      RichText(
+                          text: TextSpan(
                         style: textTheme.bodyMedium,
                         children: const [
                           TextSpan(
