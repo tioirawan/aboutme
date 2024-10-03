@@ -1,9 +1,10 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mouse_parallax/mouse_parallax.dart';
 import 'package:tioirawan/sections/more_works_section.dart';
-import 'dart:math' as math;
 
 import '../main.dart';
 import '../utils/scroll_value_notifier_adapter.dart';
@@ -110,7 +111,7 @@ class _ContactSectionState extends ConsumerState<ContactSection> {
                           Text(
                             "Or contact me via",
                             style: textTheme.labelMedium!.apply(
-                              color: colorScheme.onBackground.withOpacity(0.5),
+                              color: colorScheme.onSurface.withOpacity(0.5),
                             ),
                           )
                               .animate(
@@ -244,9 +245,9 @@ class _ContactSectionState extends ConsumerState<ContactSection> {
                     child: SizedBox(
                       width: buttonWidth,
                       height: buttonHeight,
-                      child: ElevatedButton(
+                      child: FilledButton(
                           onPressed: () {},
-                          style: ElevatedButton.styleFrom(
+                          style: FilledButton.styleFrom(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(150),
                             ),
